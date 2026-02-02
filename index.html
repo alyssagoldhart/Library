@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="main-grid">
+
+    <header>
+      <div class="library-header">
+        <img id="stacked-books" src="images/stack-books.png">
+        <h1>Library</h1>
+      </div>
+      <dialog id="bookDialog">
+        <p>Add a new book:</p>
+        <form>
+          <div class="form-row">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+          <div class="form-row">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+          </div>
+          <div class="form-row">
+            <label for="pages">Number of pages:</label>
+            <input type="text" id="pages" name="pages" pattern="[0-9]*"required>
+          </div>
+          <fieldset>
+            <legend>Read Status:</legend>
+              <div class="radio-buttons">
+                <input type="radio" id="read" name="read" value="true" checked/>
+                <label for="read">Read</label>
+                <input type="radio" id="unread" name="read" value="false"/>
+                <label for="unread">Unread</label>
+              </div>
+          </fieldset>
+          <div class="form-buttons">
+            <button formmethod="dialog" id="confirmButton">Confirm</button>
+            <button formmethod="dialog" id="cancelButton">Cancel</button>
+          </div>
+        </form>
+      </dialog>
+      <button id="showDialog">+ New Book</button>
+    
+    </header>
+
+    <main class="library">
+
+      <div class="empty-library">
+        Your library is currently empty.
+      </div>
+
+    </main>
+
+    <footer><a href="https://www.freepik.com/free-vector/stack-books-isolated-white-hand-drawn-sketch-vector-illustration_30001902.htm#fromView=search&page=2&position=16&uuid=d8514ca5-5080-481d-994d-afaf1f88294c&query=Library+svg">Image by Rochak Shukla on Freepik</a></footer>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
